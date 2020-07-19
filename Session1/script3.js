@@ -55,3 +55,4 @@ if (productOne.toUpperCase() === `BANANA`) {
     document.getElementById("receipt").innerHTML = "<h3>Please refresh this page!</h3>";
 }
 
+// Trying to figure out how to make this loop back to the if statement if the else statement runs
