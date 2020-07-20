@@ -7,6 +7,7 @@ let quantity;
 let productOne;
 let productSubtotal;
 let totalCost;
+const receipt = document.querySelector("#receipt");
 
 alert(`Welcome to my online store! I have a few options to choose from. 
 Please let me know if you want a banana, grapes or an orange.`);
@@ -30,7 +31,18 @@ if (productOne.toUpperCase() === `BANANA`) {
     totalCost = productSubtotal * tax + productSubtotal;
     alert(`Your total after tax is: $${totalCost}`);
     console.log(`Customer total is $${totalCost}.`);
-    document.getElementById("receipt").innerHTML = "<h3>Thank you for your purchase!</h3>";
+    receipt.innerHTML = `
+        <h2>Thank you for your purchase!</h2>
+        <h4>Product:</h4>
+        <p>${productOne.toUpperCase()}</p> 
+        <h4>Quantity:</h4>
+        <p>${quantity}</p> 
+        <h4>Net Sales Price:</h4>
+        <p>$${productSubtotal}</p>
+        <h4>Tax:</h4>
+        <p>${tax}</p> 
+        <h4>Total Cost:</h4>
+        <p>$${totalCost}</p>`;
 
 } else if (productOne.toUpperCase() === `ORANGE`) {
 
@@ -42,7 +54,18 @@ if (productOne.toUpperCase() === `BANANA`) {
     totalCost = productSubtotal * tax + productSubtotal;
     alert(`Your total after tax is: $${totalCost}`);
     console.log(`Customer total is $${totalCost}.`);
-    document.getElementById("receipt").innerHTML = "<h3>Thank you for your purchase!</h3>";
+    receipt.innerHTML = `
+    <h2>Thank you for your purchase!</h2>
+    <h4>Product:</h4>
+    <p>${productOne.toUpperCase()}</p> 
+    <h4>Quantity:</h4>
+    <p>${quantity}</p> 
+    <h4>Net Sales Price:</h4>
+    <p>$${productSubtotal}</p>
+    <h4>Tax:</h4>
+    <p>${tax}</p> 
+    <h4>Total Cost:</h4>
+    <p>$${totalCost}</p>`;
     
 
 } else  if (productOne.toUpperCase() === `GRAPES`) {
@@ -55,7 +78,18 @@ if (productOne.toUpperCase() === `BANANA`) {
     totalCost = productSubtotal * tax + productSubtotal;
     alert(`Your total after tax is: $${totalCost}`);
     console.log(`Customer total is $${totalCost}.`);
-    document.getElementById("receipt").innerHTML = "<h3>Thank you for your purchase!</h3>";
+    receipt.innerHTML = `
+        <h2>Thank you for your purchase!</h2>
+        <h4>Product:</h4>
+        <p>${productOne.toUpperCase()}</p> 
+        <h4>Quantity:</h4>
+        <p>${quantity}</p> 
+        <h4>Net Sales Price:</h4>
+        <p>$${productSubtotal}</p>
+        <h4>Tax:</h4>
+        <p>${tax}</p> 
+        <h4>Total Cost:</h4>
+        <p>$${totalCost}</p>`;
 
 } else {
     alert(`Invalid product type! Please try again!`);
