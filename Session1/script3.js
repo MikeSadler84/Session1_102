@@ -11,7 +11,14 @@ let totalCost;
 alert(`Welcome to my online store! I have a few options to choose from. 
 Please let me know if you want a banana, grapes or an orange.`);
 
+// A prompt for the user which is store in the var productOne
+
 productOne = prompt(`Enter the product name: `);
+
+/* 
+    The code below uses the stored productOne var given by the user to determine which line of code is ran
+    Each statement is related to one of three different selections for the customer to purchase 
+*/
 
 if (productOne.toUpperCase() === `BANANA`) {
 
