@@ -21,7 +21,7 @@ productOne = prompt(`Enter the product name: `);
     Each statement is related to one of three different selections for the customer to purchase 
 */
 
-if (productOne.toUpperCase() === `BANANA`) {
+if (productOne.toUpperCase() === `BANANA` || productOne.toUpperCase() === `BANANAS`) {
 
     quantity = prompt(`Quantity amount: `);
     console.log(`Customer has chosen ${quantity} ${productOne}(s)`);
@@ -44,7 +44,7 @@ if (productOne.toUpperCase() === `BANANA`) {
         <h4>Total Cost:</h4>
         <p>$${totalCost}</p>`;
 
-} else if (productOne.toUpperCase() === `ORANGE`) {
+} else if (productOne.toUpperCase() === `ORANGE` || productOne.toUpperCase() === `ORANGES`) {
 
     quantity = prompt(`Quantity amount: `);
     console.log(`Customer has chosen ${quantity} ${productOne}(s)`);
@@ -55,20 +55,20 @@ if (productOne.toUpperCase() === `BANANA`) {
     alert(`Your total after tax is: $${totalCost}`);
     console.log(`Customer total is $${totalCost}.`);
     receipt.innerHTML = `
-    <h2>Thank you for your purchase!</h2>
-    <h4>Product:</h4>
-    <p>${productOne.toUpperCase()}</p> 
-    <h4>Quantity:</h4>
-    <p>${quantity}</p> 
-    <h4>Net Sales Price:</h4>
-    <p>$${productSubtotal}</p>
-    <h4>Tax:</h4>
-    <p>${tax}</p> 
-    <h4>Total Cost:</h4>
-    <p>$${totalCost}</p>`;
+        <h2>Thank you for your purchase!</h2>
+        <h4>Product:</h4>
+        <p>${productOne.toUpperCase()}</p> 
+        <h4>Quantity:</h4>
+        <p>${quantity}</p> 
+        <h4>Net Sales Price:</h4>
+        <p>$${productSubtotal}</p>
+        <h4>Tax:</h4>
+        <p>${tax}</p> 
+        <h4>Total Cost:</h4>
+        <p>$${totalCost}</p>`;
     
 
-} else  if (productOne.toUpperCase() === `GRAPES`) {
+} else  if (productOne.toUpperCase() === `GRAPES` || productOne.toUpperCase() === `GRAPE`) {
 
     quantity = prompt(`Quantity amount: `);
     console.log(`Customer has chosen ${quantity} ${productOne}(s)`);
@@ -93,7 +93,7 @@ if (productOne.toUpperCase() === `BANANA`) {
 
 } else {
     alert(`Invalid product type! Please try again!`);
-    document.getElementById("receipt").innerHTML = "<h3>Please refresh this page!</h3>";
+    receipt.innerHTML = "<h3>Please refresh this page!</h3>";
 }
 
 // Trying to figure out how to make this loop back to the if statement if the else statement runs
